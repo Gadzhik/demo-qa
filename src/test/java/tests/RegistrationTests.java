@@ -1,22 +1,21 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import java.lang.module.Configuration;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static java.lang.module.Configuration.*;
 
 public class RegistrationTests {
 
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browseSize = "1920x1080";
+        Configuration.browserSize = "1920x1080";
     }
 
     @Test
